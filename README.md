@@ -136,9 +136,9 @@ See our comprehensive guides:
 
 ## Data Sources
 
-- **Equinix**: Scraped from public location pages ([source](https://www.equinix.com/data-centers))
+- **Equinix**: Scraped from public location pages ([source]([https://www.equinix.com/data-centers](https://www.megaport.com/megaport-enabled-locations/)))
 - **Megaport**: Fetched from Megaport API ([source](https://docs.megaport.com/api/api-port/))
-- **11:11 Systems**: Scraped from datacenters.com listings ([source](https://www.datacenters.com/providers/11-11-systems/data-center-locations))
+- **11:11 Systems**: Scraped from datacenters.com listings ([source](https://1111systems.com/services/hosted-private-cloud/#locations))
 
 Content was rephrased for compliance with licensing restrictions.
 
