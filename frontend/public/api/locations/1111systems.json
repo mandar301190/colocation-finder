@@ -1,0 +1,41 @@
+[
+  {
+    "id": "1111systems-chi",
+    "provider": "11:11 Systems",
+    "name": "Chicago",
+    "city": "Chicago",
+    "country": "United States",
+    "region": "North America",
+    "address": "350 E Cermak Rd, Chicago, IL 60616",
+    "latitude": 41.8781,
+    "longitude": -87.6298,
+    "features": ["Enterprise Grade", "Managed Services", "24/7 NOC"],
+    "connectivity": "Carrier neutral"
+  },
+  {
+    "id": "1111systems-lon",
+    "provider": "11:11 Systems",
+    "name": "London",
+    "city": "London",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "address": "Telehouse North, Coriander Avenue, London E14 2AA",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "features": ["Enterprise Grade", "Managed Services", "24/7 NOC"],
+    "connectivity": "Carrier neutral"
+  },
+  {
+    "id": "1111systems-hkg",
+    "provider": "11:11 Systems",
+    "name": "Hong Kong",
+    "city": "Hong Kong",
+    "country": "Hong Kong",
+    "region": "Asia Pacific",
+    "address": "MEGA-i, 398 Kwun Tong Road, Kwun Tong, Kowloon",
+    "latitude": 22.3193,
+    "longitude": 114.1694,
+    "features": ["Enterprise Grade", "Managed Services", "24/7 NOC"],
+    "connectivity": "Carrier neutral"
+  }
+]

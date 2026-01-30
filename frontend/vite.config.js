@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? '/' : '/colocation-finder/',
+  base: '/colocation-finder/',
   server: {
     port: 5173
   },

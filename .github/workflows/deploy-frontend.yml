@@ -1,9 +1,8 @@
-name: Deploy Frontend to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [ main ]
-    paths: [ 'frontend/**' ]
   workflow_dispatch:
 
 permissions:
@@ -37,8 +36,6 @@ jobs:
       - name: Build
         run: |
           cd frontend
-          # Create production environment file
-          echo "VITE_API_URL=https://colocation-finder-backend.vercel.app" > .env.production
           npm run build
           
       - name: Setup Pages

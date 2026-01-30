@@ -1,0 +1,41 @@
+[
+  {
+    "id": "equinix-ny1",
+    "provider": "Equinix",
+    "name": "NY1 - New York",
+    "city": "New York",
+    "country": "United States",
+    "region": "North America",
+    "address": "755 Secaucus Road, Secaucus, NJ 07094",
+    "latitude": 40.7589,
+    "longitude": -74.0658,
+    "features": ["24/7 Support", "Redundant Power", "High Security"],
+    "connectivity": "Multiple carriers available"
+  },
+  {
+    "id": "equinix-ld5",
+    "provider": "Equinix",
+    "name": "LD5 - London",
+    "city": "London",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "address": "8 Buckingham Avenue, Slough, SL1 4PF",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "features": ["24/7 Support", "Redundant Power", "High Security"],
+    "connectivity": "Multiple carriers available"
+  },
+  {
+    "id": "equinix-sy3",
+    "provider": "Equinix",
+    "name": "SY3 - Sydney",
+    "city": "Sydney",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "address": "47 Bourke Road, Alexandria, NSW 2015",
+    "latitude": -33.8688,
+    "longitude": 151.2093,
+    "features": ["24/7 Support", "Redundant Power", "High Security"],
+    "connectivity": "Multiple carriers available"
+  }
+]
