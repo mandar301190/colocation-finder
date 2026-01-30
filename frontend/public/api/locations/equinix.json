@@ -102,9 +102,8 @@
     "longitude": -87.6298,
     "features": ["24/7 Support", "Redundant Power", "High Security", "Carrier Neutral"],
     "connectivity": "Multiple carriers available"
-  }
-]
-  ,{
+  },
+  {
     "id": "equinix-ch7",
     "provider": "Equinix",
     "name": "CH7 - Westmont",
