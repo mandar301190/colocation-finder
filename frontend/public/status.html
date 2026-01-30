@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colocation Finder - Status</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        .status-good {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .status-warning {
+            background: #FF9800;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .info-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #FFD700;
+        }
+        .link {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        .test-results {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Colocation Finder - System Status</h1>
+        
+        <div id="main-status" class="status-warning">
+            🔄 Checking System Status...
+        </div>
+        
+        <div class="info-box">
+            <h3>📊 Application Information</h3>
+            <p><strong>Name:</strong> Colocation Finder</p>
+            <p><strong>Version:</strong> 2.0.0</p>
+            <p><strong>Repository:</strong> mandar301190/colocation-finder</p>
+            <p><strong>Deployment:</strong> GitHub Pages</p>
+            <p><strong>Last Updated:</strong> <span id="last-updated">Loading...</span></p>
+        </div>
+        
+        <div class="info-box">
+            <h3>🌐 Access Points</h3>
+            <p><strong>Main Application:</strong><br>
+            <a href="../" class="link">https://mandar301190.github.io/colocation-finder/</a></p>
+            
+            <p><strong>Status Page:</strong><br>
+            <a href="status.html" class="link">https://mandar301190.github.io/colocation-finder/status.html</a></p>
+        </div>
+        
+        <div class="info-box">
+            <h3>🔧 System Tests</h3>
+            <div id="test-results" class="test-results">
+                Running system tests...<br>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h3>📈 Features</h3>
+            <ul>
+                <li>✅ 600+ Global Data Center Locations</li>
+                <li>✅ Interactive Map View</li>
+                <li>✅ Advanced Filtering</li>
+                <li>✅ Provider Comparison (Equinix, Megaport, 11:11 Systems)</li>
+                <li>✅ Mobile Responsive Design</li>
+                <li>✅ Fast Static Data Loading</li>
+            </ul>
+        </div>
+        
+        <div class="info-box">
+            <h3>🛠️ Troubleshooting</h3>
+            <p>If you're experiencing issues:</p>
+            <ol>
+                <li>Try refreshing the page (Ctrl+F5 or Cmd+Shift+R)</li>
+                <li>Clear your browser cache</li>
+                <li>Check if JavaScript is enabled</li>
+                <li>Try a different browser</li>
+                <li>Check the browser console for errors (F12)</li>
+            </ol>
+        </div>
+    </div>
+    
+    <script>
+        // Set last updated time
+        document.getElementById('last-updated').textContent = new Date().toLocaleString();
+        
+        const testResults = document.getElementById('test-results');
+        const mainStatus = document.getElementById('main-status');
+        
+        let allTestsPassed = true;
+        
+        function addTestResult(test, status, details) {
+            const icon = status ? '✅' : '❌';
+            testResults.innerHTML += `${icon} ${test}: ${details}<br>`;
+            if (!status) allTestsPassed = false;
+        }
+        
+        // Test 1: API Data Access
+        fetch('../api/locations.json')
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return response.json();
+            })
+            .then(data => {
+                addTestResult('API Data Access', true, `Successfully loaded ${data.length} locations`);
+                
+                // Test 2: Data Structure
+                const hasValidStructure = data.length > 0 && 
+                    data[0].hasOwnProperty('id') && 
+                    data[0].hasOwnProperty('provider') &&
+                    data[0].hasOwnProperty('name');
+                addTestResult('Data Structure', hasValidStructure, 
+                    hasValidStructure ? 'Valid location data structure' : 'Invalid data structure');
+                
+                // Test 3: Provider Coverage
+                const providers = [...new Set(data.map(loc => loc.provider))];
+                const expectedProviders = ['Equinix', 'Megaport', '11:11 Systems'];
+                const hasAllProviders = expectedProviders.every(p => providers.includes(p));
+                addTestResult('Provider Coverage', hasAllProviders, 
+                    `Found providers: ${providers.join(', ')}`);
+                
+                updateFinalStatus();
+            })
+            .catch(error => {
+                addTestResult('API Data Access', false, `Failed: ${error.message}`);
+                updateFinalStatus();
+            });
+        
+        // Test 4: Browser Compatibility
+        const hasModernFeatures = 'fetch' in window && 'Promise' in window && 'Map' in window;
+        addTestResult('Browser Compatibility', hasModernFeatures, 
+            hasModernFeatures ? 'Modern browser features available' : 'Browser may not support all features');
+        
+        function updateFinalStatus() {
+            setTimeout(() => {
+                if (allTestsPassed) {
+                    mainStatus.className = 'status-good';
+                    mainStatus.innerHTML = '✅ All Systems Operational';
+                } else {
+                    mainStatus.className = 'status-warning';
+                    mainStatus.innerHTML = '⚠️ Some Issues Detected - Check Test Results';
+                }
+            }, 1000);
+        }
+        
+        console.log('🎉 Status page loaded successfully!');
+        console.log('📅 Loaded at:', new Date().toISOString());
+    </script>
+</body>
+</html>
