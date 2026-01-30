@@ -1,5 +1,18 @@
 [
   {
+    "id": "megaport-ny1",
+    "provider": "Megaport",
+    "name": "New York",
+    "city": "New York",
+    "country": "United States",
+    "region": "North America",
+    "address": "32 Avenue of the Americas, New York, NY 10013",
+    "latitude": 40.7128,
+    "longitude": -74.0060,
+    "features": ["Software Defined Network", "Cloud Connectivity", "Global Reach", "On-Demand Provisioning"],
+    "connectivity": "Direct cloud connections to AWS, Azure, Google Cloud"
+  },
+  {
     "id": "megaport-lax",
     "provider": "Megaport",
     "name": "Los Angeles",
@@ -9,8 +22,34 @@
     "address": "One Wilshire, 624 S Grand Ave, Los Angeles, CA 90017",
     "latitude": 34.0522,
     "longitude": -118.2437,
-    "features": ["Cloud Connectivity", "Software Defined", "Global Reach"],
-    "connectivity": "Direct cloud connections"
+    "features": ["Software Defined Network", "Cloud Connectivity", "Global Reach", "On-Demand Provisioning"],
+    "connectivity": "Direct cloud connections to AWS, Azure, Google Cloud"
+  },
+  {
+    "id": "megaport-chi",
+    "provider": "Megaport",
+    "name": "Chicago",
+    "city": "Chicago",
+    "country": "United States",
+    "region": "North America",
+    "address": "350 E Cermak Rd, Chicago, IL 60616",
+    "latitude": 41.8781,
+    "longitude": -87.6298,
+    "features": ["Software Defined Network", "Cloud Connectivity", "Global Reach", "On-Demand Provisioning"],
+    "connectivity": "Direct cloud connections to AWS, Azure, Google Cloud"
+  },
+  {
+    "id": "megaport-lon",
+    "provider": "Megaport",
+    "name": "London",
+    "city": "London",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "address": "Telehouse North, Coriander Avenue, London E14 2AA",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "features": ["Software Defined Network", "Cloud Connectivity", "Global Reach", "On-Demand Provisioning"],
+    "connectivity": "Direct cloud connections to AWS, Azure, Google Cloud"
   },
   {
     "id": "megaport-fra",
@@ -22,8 +61,21 @@
     "address": "Hanauer Landstraße 302, 60314 Frankfurt am Main",
     "latitude": 50.1109,
     "longitude": 8.6821,
-    "features": ["Cloud Connectivity", "Software Defined", "Global Reach"],
-    "connectivity": "Direct cloud connections"
+    "features": ["Software Defined Network", "Cloud Connectivity", "Global Reach", "On-Demand Provisioning"],
+    "connectivity": "Direct cloud connections to AWS, Azure, Google Cloud"
+  },
+  {
+    "id": "megaport-ams",
+    "provider": "Megaport",
+    "name": "Amsterdam",
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "region": "Europe",
+    "address": "Science Park 610, 1098 XH Amsterdam",
+    "latitude": 52.3676,
+    "longitude": 4.9041,
+    "features": ["Software Defined Network", "Cloud Connectivity", "Global Reach", "On-Demand Provisioning"],
+    "connectivity": "Direct cloud connections to AWS, Azure, Google Cloud"
   },
   {
     "id": "megaport-sin",
@@ -35,7 +87,46 @@
     "address": "20 Ayer Rajah Crescent, Singapore 139964",
     "latitude": 1.3521,
     "longitude": 103.8198,
-    "features": ["Cloud Connectivity", "Software Defined", "Global Reach"],
-    "connectivity": "Direct cloud connections"
+    "features": ["Software Defined Network", "Cloud Connectivity", "Global Reach", "On-Demand Provisioning"],
+    "connectivity": "Direct cloud connections to AWS, Azure, Google Cloud"
+  },
+  {
+    "id": "megaport-syd",
+    "provider": "Megaport",
+    "name": "Sydney",
+    "city": "Sydney",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "address": "4 Eden Park Dr, Macquarie Park NSW 2113",
+    "latitude": -33.8688,
+    "longitude": 151.2093,
+    "features": ["Software Defined Network", "Cloud Connectivity", "Global Reach", "On-Demand Provisioning"],
+    "connectivity": "Direct cloud connections to AWS, Azure, Google Cloud"
+  },
+  {
+    "id": "megaport-tok",
+    "provider": "Megaport",
+    "name": "Tokyo",
+    "city": "Tokyo",
+    "country": "Japan",
+    "region": "Asia Pacific",
+    "address": "Otemachi Financial City Grand Cube, Tokyo 100-0004",
+    "latitude": 35.6762,
+    "longitude": 139.6503,
+    "features": ["Software Defined Network", "Cloud Connectivity", "Global Reach", "On-Demand Provisioning"],
+    "connectivity": "Direct cloud connections to AWS, Azure, Google Cloud"
+  },
+  {
+    "id": "megaport-tor",
+    "provider": "Megaport",
+    "name": "Toronto",
+    "city": "Toronto",
+    "country": "Canada",
+    "region": "North America",
+    "address": "151 Front St W, Toronto, ON M5J 2N1",
+    "latitude": 43.6532,
+    "longitude": -79.3832,
+    "features": ["Software Defined Network", "Cloud Connectivity", "Global Reach", "On-Demand Provisioning"],
+    "connectivity": "Direct cloud connections to AWS, Azure, Google Cloud"
   }
 ]
