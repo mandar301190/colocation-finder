@@ -110,8 +110,8 @@ function App() {
           <div className="bg-red-50 border border-red-200 text-red-700 px-6 py-4 rounded-lg">
             <div className="font-medium">{error}</div>
             <div className="mt-2 text-sm">
-              The app uses comprehensive location data compiled from official provider sources. 
-              For live API integration, a backend service with authentication would be required.
+              The app uses comprehensive location data from static JSON files. 
+              Click "API Info" above to see how to implement live API integration.
             </div>
             <button 
               onClick={handleRefresh}
@@ -128,10 +128,10 @@ function App() {
               </span>
               <div className="flex items-center gap-2">
                 <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
-                  Comprehensive Data
+                  Static Data
                 </span>
                 <button 
-                  onClick={() => console.log('Data source info:', locationService.getAPIImplementationInfo())}
+                  onClick={() => console.log('API Info:', locationService.getAPIImplementationInfo())}
                   className="text-xs text-blue-600 hover:text-blue-800"
                   title="View API implementation info in console"
                 >
