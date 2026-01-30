@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployment Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .status {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Colocation Finder - Deployment Test</h1>
+        
+        <div class="status">
+            ✅ GitHub Pages Deployment Working
+        </div>
+        
+        <div class="info">
+            <h3>📊 Current Status</h3>
+            <p><strong>Repository:</strong> mandar301190/colocation-finder</p>
+            <p><strong>Branch:</strong> main</p>
+            <p><strong>Deployment:</strong> GitHub Pages</p>
+            <p><strong>Build System:</strong> Vite + React</p>
+        </div>
+        
+        <div class="info">
+            <h3>🔧 Recent Updates</h3>
+            <ul>
+                <li>Updated location service for better reliability</li>
+                <li>Simplified data loading approach</li>
+                <li>Fixed potential build issues</li>
+                <li>Added comprehensive API implementation guide</li>
+            </ul>
+        </div>
+        
+        <div class="info">
+            <h3>🌐 Access Points</h3>
+            <p><strong>Main App:</strong> <a href="https://mandar301190.github.io/colocation-finder/" style="color: #FFD700;">https://mandar301190.github.io/colocation-finder/</a></p>
+            <p><strong>This Test:</strong> <a href="https://mandar301190.github.io/colocation-finder/test-deployment.html" style="color: #FFD700;">https://mandar301190.github.io/colocation-finder/test-deployment.html</a></p>
+        </div>
+        
+        <div class="info">
+            <p><em>If you can see this page, GitHub Pages deployment is working correctly. The main React app should be available at the link above.</em></p>
+        </div>
+    </div>
+    
+    <script>
+        console.log('🎉 Deployment test page loaded successfully!');
+        console.log('📅 Loaded at:', new Date().toISOString());
+        
+        // Test if we can access the API data
+        fetch('/colocation-finder/api/locations.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log('✅ API data accessible:', data.length, 'locations');
+                document.body.innerHTML += `
+                    <div style="background: rgba(76, 175, 80, 0.2); padding: 15px; border-radius: 5px; margin: 15px 0;">
+                        <strong>✅ API Test Passed:</strong> Successfully loaded ${data.length} locations from JSON API
+                    </div>
+                `;
+            })
+            .catch(error => {
+                console.error('❌ API test failed:', error);
+                document.body.innerHTML += `
+                    <div style="background: rgba(244, 67, 54, 0.2); padding: 15px; border-radius: 5px; margin: 15px 0;">
+                        <strong>❌ API Test Failed:</strong> Could not load location data - ${error.message}
+                    </div>
+                `;
+            });
+    </script>
+</body>
+</html>
