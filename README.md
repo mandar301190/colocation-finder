@@ -39,7 +39,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/colocation-finder.git
+git clone https://github.com/mandar301190/colocation-finder.git
 cd colocation-finder
 
 # Run the quick start script
