@@ -1,6 +1,6 @@
 [
   {
-    "id": "1111systems-nyc",
+    "id": "1111systems-nyc1",
     "provider": "11:11 Systems",
     "name": "New York City",
     "city": "New York",
@@ -13,7 +13,7 @@
     "connectivity": "Carrier neutral with multi-cloud connectivity"
   },
   {
-    "id": "1111systems-chi",
+    "id": "1111systems-chi1",
     "provider": "11:11 Systems",
     "name": "Chicago",
     "city": "Chicago",
@@ -26,7 +26,7 @@
     "connectivity": "Carrier neutral with multi-cloud connectivity"
   },
   {
-    "id": "1111systems-dal",
+    "id": "1111systems-dal1",
     "provider": "11:11 Systems",
     "name": "Dallas",
     "city": "Dallas",
@@ -39,7 +39,7 @@
     "connectivity": "Carrier neutral with multi-cloud connectivity"
   },
   {
-    "id": "1111systems-lax",
+    "id": "1111systems-lax1",
     "provider": "11:11 Systems",
     "name": "Los Angeles",
     "city": "Los Angeles",
@@ -52,7 +52,7 @@
     "connectivity": "Carrier neutral with multi-cloud connectivity"
   },
   {
-    "id": "1111systems-atl",
+    "id": "1111systems-atl1",
     "provider": "11:11 Systems",
     "name": "Atlanta",
     "city": "Atlanta",
@@ -65,7 +65,7 @@
     "connectivity": "Carrier neutral with multi-cloud connectivity"
   },
   {
-    "id": "1111systems-sj",
+    "id": "1111systems-sj1",
     "provider": "11:11 Systems",
     "name": "San Jose",
     "city": "San Jose",
@@ -78,7 +78,20 @@
     "connectivity": "Carrier neutral with multi-cloud connectivity"
   },
   {
-    "id": "1111systems-tor",
+    "id": "1111systems-phx1",
+    "provider": "11:11 Systems",
+    "name": "Scottsdale",
+    "city": "Phoenix",
+    "country": "United States",
+    "region": "North America",
+    "address": "15169 N Scottsdale Rd, Scottsdale, AZ 85254",
+    "latitude": 33.4484,
+    "longitude": -112.0740,
+    "features": ["Disaster Recovery", "Private Cloud", "Managed Services", "24/7 NOC", "SSAE 18 SOC 2 Type II"],
+    "connectivity": "Carrier neutral with multi-cloud connectivity"
+  },
+  {
+    "id": "1111systems-tor1",
     "provider": "11:11 Systems",
     "name": "Toronto",
     "city": "Toronto",
@@ -91,7 +104,7 @@
     "connectivity": "Carrier neutral with multi-cloud connectivity"
   },
   {
-    "id": "1111systems-res",
+    "id": "1111systems-res1",
     "provider": "11:11 Systems",
     "name": "Reston",
     "city": "Reston",
@@ -104,7 +117,46 @@
     "connectivity": "Carrier neutral with multi-cloud connectivity"
   },
   {
-    "id": "1111systems-ams",
+    "id": "1111systems-ash1",
+    "provider": "11:11 Systems",
+    "name": "Ashburn",
+    "city": "Ashburn",
+    "country": "United States",
+    "region": "North America",
+    "address": "21715 Filigree Court, Ashburn, VA 20147",
+    "latitude": 39.0458,
+    "longitude": -77.4874,
+    "features": ["Disaster Recovery", "Private Cloud", "Managed Services", "24/7 NOC", "SSAE 18 SOC 2 Type II"],
+    "connectivity": "Carrier neutral with multi-cloud connectivity"
+  },
+  {
+    "id": "1111systems-nj1",
+    "provider": "11:11 Systems",
+    "name": "Newark",
+    "city": "Newark",
+    "country": "United States",
+    "region": "North America",
+    "address": "755 Secaucus Road, Secaucus, NJ 07094",
+    "latitude": 40.7589,
+    "longitude": -74.0658,
+    "features": ["Disaster Recovery", "Private Cloud", "Managed Services", "24/7 NOC", "SSAE 18 SOC 2 Type II"],
+    "connectivity": "Carrier neutral with multi-cloud connectivity"
+  },
+  {
+    "id": "1111systems-nj2",
+    "provider": "11:11 Systems",
+    "name": "Carteret",
+    "city": "Newark",
+    "country": "United States",
+    "region": "North America",
+    "address": "100 Delawanna Avenue, Carteret, NJ 07008",
+    "latitude": 40.5776,
+    "longitude": -74.2265,
+    "features": ["Disaster Recovery", "Private Cloud", "Managed Services", "24/7 NOC", "SSAE 18 SOC 2 Type II"],
+    "connectivity": "Carrier neutral with multi-cloud connectivity"
+  },
+  {
+    "id": "1111systems-ams1",
     "provider": "11:11 Systems",
     "name": "Amsterdam",
     "city": "Amsterdam",
@@ -113,6 +165,84 @@
     "address": "Cessnalaan 50, 1119 NL Schiphol-Rijk",
     "latitude": 52.3676,
     "longitude": 4.9041,
+    "features": ["Disaster Recovery", "Private Cloud", "Managed Services", "24/7 NOC", "ISO 27001"],
+    "connectivity": "Carrier neutral with multi-cloud connectivity"
+  },
+  {
+    "id": "1111systems-lon1",
+    "provider": "11:11 Systems",
+    "name": "London",
+    "city": "London",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "address": "Telehouse North, Coriander Avenue, London E14 2AA",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "features": ["Disaster Recovery", "Private Cloud", "Managed Services", "24/7 NOC", "ISO 27001"],
+    "connectivity": "Carrier neutral with multi-cloud connectivity"
+  },
+  {
+    "id": "1111systems-fra1",
+    "provider": "11:11 Systems",
+    "name": "Frankfurt",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "region": "Europe",
+    "address": "Kleyerstraße 90, 60326 Frankfurt am Main",
+    "latitude": 50.1109,
+    "longitude": 8.6821,
+    "features": ["Disaster Recovery", "Private Cloud", "Managed Services", "24/7 NOC", "ISO 27001"],
+    "connectivity": "Carrier neutral with multi-cloud connectivity"
+  },
+  {
+    "id": "1111systems-syd1",
+    "provider": "11:11 Systems",
+    "name": "Sydney",
+    "city": "Sydney",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "address": "47 Bourke Road, Alexandria NSW 2015",
+    "latitude": -33.8688,
+    "longitude": 151.2093,
+    "features": ["Disaster Recovery", "Private Cloud", "Managed Services", "24/7 NOC", "ISO 27001"],
+    "connectivity": "Carrier neutral with multi-cloud connectivity"
+  },
+  {
+    "id": "1111systems-mel1",
+    "provider": "11:11 Systems",
+    "name": "Melbourne",
+    "city": "Melbourne",
+    "country": "Australia",
+    "region": "Asia Pacific",
+    "address": "820 Lorimer Street, Port Melbourne VIC 3207",
+    "latitude": -37.8136,
+    "longitude": 144.9631,
+    "features": ["Disaster Recovery", "Private Cloud", "Managed Services", "24/7 NOC", "ISO 27001"],
+    "connectivity": "Carrier neutral with multi-cloud connectivity"
+  },
+  {
+    "id": "1111systems-sin1",
+    "provider": "11:11 Systems",
+    "name": "Singapore",
+    "city": "Singapore",
+    "country": "Singapore",
+    "region": "Asia Pacific",
+    "address": "20 Ayer Rajah Crescent, Singapore 139964",
+    "latitude": 1.3521,
+    "longitude": 103.8198,
+    "features": ["Disaster Recovery", "Private Cloud", "Managed Services", "24/7 NOC", "ISO 27001"],
+    "connectivity": "Carrier neutral with multi-cloud connectivity"
+  },
+  {
+    "id": "1111systems-hkg1",
+    "provider": "11:11 Systems",
+    "name": "Hong Kong",
+    "city": "Hong Kong",
+    "country": "Hong Kong",
+    "region": "Asia Pacific",
+    "address": "MEGA-i, 398 Kwun Tong Road, Kwun Tong, Kowloon",
+    "latitude": 22.3193,
+    "longitude": 114.1694,
     "features": ["Disaster Recovery", "Private Cloud", "Managed Services", "24/7 NOC", "ISO 27001"],
     "connectivity": "Carrier neutral with multi-cloud connectivity"
   }
