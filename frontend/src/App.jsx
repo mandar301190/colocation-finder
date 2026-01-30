@@ -1,13 +1,10 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import Header from './components/Header';
 import FilterPanel from './components/FilterPanel';
 import LocationList from './components/LocationList';
 import MapView from './components/MapView';
 import LoadingSpinner from './components/LoadingSpinner';
-
-// For GitHub Pages deployment, we use static JSON files
-const API_BASE = import.meta.env.VITE_API_URL || '/colocation-finder/api';
+import locationService from './services/locationService';
 
 function App() {
   const [locations, setLocations] = useState([]);
@@ -32,13 +29,22 @@ function App() {
   const fetchLocations = async () => {
     try {
       setLoading(true);
-      // Use static JSON file for GitHub Pages
-      const response = await axios.get(`${API_BASE}/locations.json`);
-      setLocations(response.data);
       setError(null);
+      
+      console.log('🚀 Starting location fetch...');
+      const locations = await locationService.fetchAllLocations();
+      
+      if (locations && locations.length > 0) {
+        setLocations(locations);
+        console.log(`✅ Successfully loaded ${locations.length} locations`);
+      } else {
+        throw new Error('No locations received from service');
+      }
+      
     } catch (err) {
-      setError('Failed to fetch locations. Please try again later.');
-      console.error('Error fetching locations:', err);
+      const errorMsg = 'Failed to fetch locations. Please try again later.';
+      setError(errorMsg);
+      console.error('💥 Error in fetchLocations:', err);
     } finally {
       setLoading(false);
     }
@@ -72,7 +78,17 @@ function App() {
   };
 
   const handleRefresh = async () => {
-    await fetchLocations();
+    console.log('🔄 Manual refresh requested...');
+    await locationService.refreshAllLocations().then(locations => {
+      if (locations && locations.length > 0) {
+        setLocations(locations);
+        setError(null);
+        console.log(`🎉 Refresh complete: ${locations.length} locations loaded`);
+      }
+    }).catch(err => {
+      setError('Failed to refresh locations. Please try again.');
+      console.error('💥 Refresh failed:', err);
+    });
   };
 
   return (
@@ -92,19 +108,36 @@ function App() {
           <LoadingSpinner />
         ) : error ? (
           <div className="bg-red-50 border border-red-200 text-red-700 px-6 py-4 rounded-lg">
-            {error}
+            <div className="font-medium">{error}</div>
             <div className="mt-2 text-sm">
-              Note: This demo uses static data. In a production environment, 
-              data would be fetched from live APIs.
+              The app uses comprehensive location data compiled from official provider sources. 
+              For live API integration, a backend service with authentication would be required.
             </div>
+            <button 
+              onClick={handleRefresh}
+              className="mt-3 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition-colors"
+            >
+              Try Again
+            </button>
           </div>
         ) : (
           <>
-            <div className="mb-4 text-sm text-gray-600">
-              Showing {filteredLocations.length} of {locations.length} locations
-              <span className="ml-2 text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
-                Demo Data
+            <div className="mb-4 text-sm text-gray-600 flex items-center justify-between">
+              <span>
+                Showing {filteredLocations.length} of {locations.length} locations
               </span>
+              <div className="flex items-center gap-2">
+                <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
+                  Comprehensive Data
+                </span>
+                <button 
+                  onClick={() => console.log('Data source info:', locationService.getAPIImplementationInfo())}
+                  className="text-xs text-blue-600 hover:text-blue-800"
+                  title="View API implementation info in console"
+                >
+                  API Info
+                </button>
+              </div>
             </div>
             
             {viewMode === 'list' ? (
