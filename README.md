@@ -8,7 +8,6 @@
 
 [Live Demo](#) | [Documentation](#documentation) | [Quick Start](#quick-start) | [Contributing](CONTRIBUTING.md)
 
-**Webapp URL** - https://mandar301190.github.io/colocation-finder/
 ---
 
 ## ✨ Features
